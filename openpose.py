@@ -3,7 +3,7 @@ import cv2
 import os
 
 # 폴더 경로 설정
-folder_path = "C:\\project_images\\images_americancasual\\americancasual_img"
+folder_path = "C:\\project_images\\images_americancasual\\americancasual_img_bg"
 
 image_files = [file for file in os.listdir(folder_path)]
 
@@ -69,7 +69,7 @@ for file_name in image_files:
         else :
             points.append(None)
 
-    cv2.imshow("Output-Keypoints",image)
+    # cv2.imshow("Output-Keypoints",image)
     # cv2.waitKey(0)
 
     # 이미지 복사
@@ -86,11 +86,11 @@ for file_name in image_files:
         if points[partA] and points[partB]:
             cv2.line(imageCopy, points[partA], points[partB], (0, 255, 0), 2)
 
-    output_path = os.path.join("C:\\project_images\\images_americancasual\\americancasual_openpose", f"result_{file_name}")
+    output_path = os.path.join("C:\\project_images\\images_americancasual\\americancasual_openpose_bg", f"result_{file_name}")
 
     cv2.imwrite(output_path, imageCopy)
 
-    cv2.waitKey(1000)
+    # cv2.waitKey(1000)
 
     # cv2.imshow("Output-Keypoints",imageCopy)
-cv2.destroyAllWindows()
+# cv2.destroyAllWindows()

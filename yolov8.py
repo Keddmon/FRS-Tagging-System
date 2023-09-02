@@ -13,11 +13,10 @@ from ultralytics import YOLO
 model = YOLO('C:\\FTS\\runs\\detect\\train4\\weights\\best.pt')
 
 # 이미지 폴더 위치
-source = 'C:\\project_images\\images\\americancasual_img'
+source = 'C:\\project_images\\images_americancasual\\americancasual_openpose_bg'
 
 # 결과 이미지
-results = model.predict(source, save=True)  # save=true =   
-
+results = model.predict(source, save=True)  # save=true = 이미지 저장
 
 
 # 모델 로드
